@@ -4,7 +4,10 @@ database and collection levels. When the storage engine detects
 conflicts between two operations, one will incur a write conflict
 causing MongoDB to transparently retry that operation.
 
-Some global operations, typically short lived operations involving
-multiple databases, still require a global "instance-wide" lock.
-Some other operations, such as dropping a collection, still require
-an exclusive database lock.
+- Some global operations, typically operations involving
+  multiple databases, require a global -- or "instance-wide" --
+  exclusive lock. See also :ref:`faq-concurrency-lock-multiple-dbs`
+
+- Certain administrative operations, such as repairing a database,
+  require a database exclusive lock. See also
+  :ref:`faq-concurrency-database-lock`

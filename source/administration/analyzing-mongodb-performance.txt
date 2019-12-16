@@ -16,11 +16,6 @@ When you encounter degraded performance, it is often a function of database
 access strategies, hardware availability, and the number of open database
 connections.
 
-Some users may experience performance limitations as a result of inadequate
-or inappropriate indexing strategies, or as a consequence of poor schema
-design patterns. :ref:`analyzing-performance-locks` discusses how these can
-impact MongoDB's internal locking.
-
 Performance issues may indicate that the database is operating at
 capacity and that it is time to add additional capacity to the
 database. In particular, the application's working set should fit in
@@ -32,40 +27,6 @@ can help relax excessive traffic.
 
 :ref:`database-profiling` can help you to understand what operations are causing
 degradation.
-
-.. _analyzing-performance-locks:
-
-Locking Performance
--------------------
-
-MongoDB uses a locking system to ensure data set consistency. If
-certain operations are long-running or a queue forms, performance
-will degrade as requests and operations wait for the lock.
-
-Lock-related slowdowns can be intermittent. To see if the lock has been
-affecting your performance, refer to the :ref:`server-status-locks`
-section and the :ref:`globalLock` section of the
-:dbcommand:`serverStatus` output.
-
-Dividing :serverstatus:`locks.timeAcquiringMicros` by
-:serverstatus:`locks.acquireWaitCount`
-can give an approximate average wait time for a particular lock mode.
-
-:serverstatus:`locks.deadlockCount` provide
-the number of times the lock acquisitions encountered deadlocks.
-
-If :serverstatus:`globalLock.currentQueue.total` is consistently high,
-then there is a chance that a large number of requests are waiting for
-a lock. This indicates a possible concurrency issue that may be affecting
-performance.
-
-If :serverstatus:`globalLock.totalTime` is
-high relative to :serverstatus:`uptime`, the database has
-existed in a lock state for a significant amount of time.
-
-Long queries can result from ineffective use of indexes;
-non-optimal schema design; poor query structure; system architecture issues; or
-insufficient RAM resulting in disk reads.
 
 .. _number-of-connections:
 
