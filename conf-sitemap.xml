@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
-  base_url="http://docs.mongodb.com/manual/"
+  base_url="http://docs.mongodb.com/v4.2/"
   store_into="build/master/sitemap.xml.gz"
   verbose="1"
   >
 
 <directory
         path="build/public/master/"
-        url="http://docs.mongodb.com/manual/"
+        url="http://docs.mongodb.com/v4.2/"
         default_file="index.html"
         />
 <filter  action="drop"  type="wildcard"  pattern="*~" />
@@ -19,7 +19,7 @@
 <filter  action="drop"  type="wildcard"  pattern="*.gif" />
 <filter  action="drop"  type="wildcard"  pattern="*.png" />
 <filter  action="drop"  type="regexp"  pattern="/\.[^/]*" />
-<filter  action="drop"  type="wildcard"  pattern="*/master/single*"/>
+<filter  action="drop"  type="wildcard"  pattern="*/v4.2/single*"/>
 <filter  action="drop"  type="wildcard"  pattern="*/meta/*"/>
 
 <filter  action="drop"  type="wildcard"  pattern="*/_static/*" />
