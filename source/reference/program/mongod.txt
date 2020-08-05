@@ -73,6 +73,11 @@ Core Options
    Returns the :program:`mongod` release number.
 
 
+.. option:: --error
+
+   Reliably returns an error.
+
+
 .. option:: --config <filename>, -f <filename>
 
    Specifies a configuration file for runtime configuration options. The
