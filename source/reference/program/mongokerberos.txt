@@ -1,13 +1,5 @@
 .. _mongokerberos:
 
-.. only:: (not man)
-
-   .. class:: hidden
-
-      .. binary:: mongokerberos
-
-.. program:: mongokerberos
-
 =================
 ``mongokerberos``
 =================
@@ -274,6 +266,14 @@ above output.
 
 Options
 -------
+
+.. only:: (not man)
+
+   .. class:: hidden
+
+      .. binary:: mongokerberos
+
+.. program:: mongokerberos
 
 .. _mongokeberos-option-server:
 

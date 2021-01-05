@@ -1,7 +1,3 @@
-.. binary:: mongod.exe
-
-.. program:: mongod.exe
-
 ==============
 ``mongod.exe``
 ==============
@@ -37,6 +33,10 @@ To install and use :binary:`~bin.mongod.exe`, read the
 
 Options
 -------
+
+.. binary:: mongod.exe
+
+.. program:: mongod.exe
 
 .. option:: --install
 
