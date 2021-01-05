@@ -2,7 +2,9 @@
 
 .. only:: (not man)
 
-   .. binary:: mongod
+   .. class:: hidden
+
+      .. binary:: mongod
 
 .. program:: mongod
 

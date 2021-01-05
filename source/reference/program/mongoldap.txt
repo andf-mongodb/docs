@@ -2,7 +2,9 @@
 
 .. only:: (not man)
 
-   .. binary:: mongoldap
+   .. class:: hidden
+
+      .. binary:: mongoldap
 
 .. program:: mongoldap
 
